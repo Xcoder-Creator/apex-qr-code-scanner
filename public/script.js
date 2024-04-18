@@ -59,6 +59,7 @@ domReady(function () {
 					document.querySelector("#error_screen").style.display = 'flex';
 				}, 1000);
 			} else if (response.code === 401){
+				alert(JSON.stringify(response));
 				document.querySelector("#error_txt").textContent = 'Network Error';
 
 				setTimeout(() => {
@@ -68,6 +69,7 @@ domReady(function () {
 			}
 		})
 		.catch((err) => {
+			alert(err);
 			document.querySelector("#error_txt").textContent = 'Network Error';
 
 			setTimeout(() => {
