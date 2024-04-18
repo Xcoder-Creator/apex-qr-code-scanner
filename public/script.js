@@ -1,5 +1,12 @@
 // script.js file
 
+const toggle_screens = () => {
+	console.log('sdsd')
+	document.querySelector("#error_screen").style.display = 'none';
+	document.querySelector("#loader_screen").style.display = 'none';
+	document.querySelector("#success_screen").style.display = 'none';
+}
+
 function domReady(fn) {
 	if (
 		document.readyState === "complete" ||
@@ -15,6 +22,7 @@ domReady(function () {
 
 	// If found you qr code
 	async function onScanSuccess(decodeText, decodeResult) {
+		console.log(decodeText)
 		document.querySelector("#loader_screen").style.display = 'flex';
 
 		await fetch(`http://localhost:8000/api/verify-qr-code`, {
@@ -75,9 +83,3 @@ domReady(function () {
 	);
 	htmlscanner.render(onScanSuccess);
 });
-
-document.querySelector("#close_modal").addEventListener('click', () => {
-	document.querySelector("#error_screen").style.display = 'none';
-	document.querySelector("#loader_screen").style.display = 'none';
-	document.querySelector("#success_screen").style.display = 'none';
-})

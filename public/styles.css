@@ -4,12 +4,15 @@
 	src: url(/fonts/Roboto-Regular.ttf);
 }
 
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
 body {
 	display: flex;
 	justify-content: center;
-	margin: 0;
-	padding: 0;
-	height: 100vh;
 	box-sizing: border-box;
 	text-align: center;
 	background: rgb(128 0 0 / 66%);
@@ -25,7 +28,7 @@ body {
 }
 
 #loader_screen {
-	position: absolute; 
+	position: fixed; 
 	top: 0; 
 	left: 0; 
 	width: 100%;
@@ -55,7 +58,7 @@ body {
 }
 
 #success_screen {
-	position: absolute; 
+	position: fixed; 
 	top: 0; 
 	left: 0; 
 	width: 100%;
@@ -67,7 +70,7 @@ body {
 }
 
 #error_screen {
-	position: absolute; 
+	position: fixed; 
 	top: 0; 
 	left: 0; 
 	width: 100%;
