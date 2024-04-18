@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex QR Code Scanner | 404 Error Page</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .error_content {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #err_404_msg {
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 1.6rem;
+        }
+
+        #g_t_h_btn {
+            width: 120px;
+            padding: 10px;
+            cursor: pointer;
+            background: rgb(247, 172, 100);
+            border-color: rgb(247, 172, 100);
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.0rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="error_content">
+        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" version="1.1" style="&#10;    width: 220px;&#10;    height: 220px;&#10;"><path d="M 243.754 1.084 C 237.605 2.534, 228.117 7.830, 223.651 12.306 C 219.267 16.700, 69.261 257.938, 64.211 268.715 C 61.753 273.959, 61.500 275.580, 61.500 286.052 C 61.500 297.395, 61.568 297.741, 65.269 305.229 C 71.277 317.387, 80.388 325.447, 92.339 329.177 C 97.885 330.909, 106.096 331, 255.984 331 C 411.244 331, 413.894 330.968, 420.299 328.989 C 427.593 326.736, 437.011 320.319, 441.305 314.675 C 442.848 312.648, 445.534 307.954, 447.274 304.244 C 451.435 295.373, 452.257 281.975, 449.229 272.393 C 447.828 267.961, 426.364 232.438, 370.980 142.893 C 329.004 75.027, 293.117 17.569, 291.230 15.209 C 283.356 5.362, 270.744 -0.069, 256.145 0.100 C 251.390 0.156, 245.814 0.598, 243.754 1.084 M 241 151 L 241 211 256 211 L 271 211 271 151 L 271 91 256 91 L 241 91 241 151 M 241 256 L 241 271 256 271 L 271 271 271 256 L 271 241 256 241 L 241 241 241 256" stroke="none" fill="rgb(247, 172, 100)" fill-rule="evenodd"/><path d="M 241 151 L 241 211 256 211 L 271 211 271 151 L 271 91 256 91 L 241 91 241 151 M 241 256 L 241 271 256 271 L 271 271 271 256 L 271 241 256 241 L 241 241 241 256 M 61 406 L 61 451 91 451 L 121 451 121 481.500 L 121 512 136 512 L 151 512 151 481.500 L 151 451 166 451 L 181 451 181 436 L 181 421 166 421 L 151 421 151 391 L 151 361 136 361 L 121 361 121 391 L 121 421 106 421 L 91 421 91 391 L 91 361 76 361 L 61 361 61 406 M 211 436.500 L 211 512 256 512 L 301 512 301 436.500 L 301 361 256 361 L 211 361 211 436.500 M 331 406 L 331 451 361 451 L 391 451 391 481.500 L 391 512 406 512 L 421 512 421 481.500 L 421 451 436 451 L 451 451 451 436 L 451 421 436 421 L 421 421 421 391 L 421 361 406 361 L 391 361 391 391 L 391 421 376 421 L 361 421 361 391 L 361 361 346 361 L 331 361 331 406 M 241 436.500 L 241 482 256 482 L 271 482 271 436.500 L 271 391 256 391 L 241 391 241 436.500" stroke="none" fill="#434f73" fill-rule="evenodd"/></svg>
+        <p id="err_404_msg">OOPS! PAGE  FOUND</p>
+        <div id="btn_placeholder">
+            <button id="g_t_h_btn">Go to home</button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var button = document.getElementById('g_t_h_btn');
+        button.addEventListener('click', () => {
+            window.location.href = 'http://localhost:8000/';
+        })
+    </script>
+</body>
+</html>
