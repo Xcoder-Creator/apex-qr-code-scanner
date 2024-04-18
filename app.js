@@ -158,4 +158,4 @@ app.use((req, res) => {
 });
 //-----------------------
 
-app.listen(process.env.PORT || 8000); // Adjusted to listen on process.env.PORT or default to 8000
+app.listen(8000 || process.env.PORT); // Adjusted to listen on process.env.PORT or default to 8000
