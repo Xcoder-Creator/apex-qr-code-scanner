@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use('/verify-qr-code', verify); //Customer authentication api module
+app.use('/api/', verify); //Customer authentication api module
 
 app.get('/healthcheck', async (req, res, _next) => {
     const healthcheck = {
