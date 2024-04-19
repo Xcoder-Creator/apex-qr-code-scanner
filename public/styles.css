@@ -27,6 +27,10 @@ body {
 	padding: 6px;
 }
 
+#myAudio {
+	display: none;
+}
+
 #loader_screen {
 	position: fixed; 
 	top: 0; 
