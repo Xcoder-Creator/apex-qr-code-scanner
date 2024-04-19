@@ -25,7 +25,7 @@ domReady(function () {
 		console.log(decodeText)
 		document.querySelector("#loader_screen").style.display = 'flex';
 
-		await fetch(`http://localhost:8000/api/verify-qr-code`, {
+		await fetch(`https://apex-qr-code-scanner.onrender.com/verify-qr-code`, {
 			method: "POST",
 			
 			body: new URLSearchParams({
