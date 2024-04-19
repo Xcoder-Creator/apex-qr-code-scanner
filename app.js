@@ -113,11 +113,18 @@ app.get('/generate-qr-codes', async (req, res, _next) => {
     });
 });
 
-app.post('/api/verify-qr-code', async (req, res, _next) => {
+app.options('/api/verify-qr-code', (req, res) => {
+    // Set CORS headers
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'POST');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Authorization, Accept');
+    // No need to send a status code here
+    // res.sendStatus(200);
+});
 
+app.post('/api/verify-qr-code', (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    
     // Validate the request form body data
     if (req.body){
         let form_data = req.body; // Form data from the frontend
@@ -158,4 +165,4 @@ app.use((req, res) => {
 });
 //-----------------------
 
-app.listen(8000 || process.env.PORT); // Adjusted to listen on process.env.PORT or default to 8000
+app.listen(process.env.PORT || 8000); // Adjusted to listen on process.env.PORT or default to 8000
