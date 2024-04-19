@@ -1,7 +1,6 @@
 // script.js file
 
 const toggle_screens = () => {
-	console.log('sdsd')
 	document.querySelector("#error_screen").style.display = 'none';
 	document.querySelector("#loader_screen").style.display = 'none';
 	document.querySelector("#success_screen").style.display = 'none';
@@ -22,7 +21,6 @@ domReady(function () {
 
 	// If found you qr code
 	async function onScanSuccess(decodeText, decodeResult) {
-		console.log(decodeText)
 		document.querySelector("#loader_screen").style.display = 'flex';
 
 		await fetch(`https://apex-qr-code-scanner.onrender.com/verify-qr-code`, {
@@ -59,7 +57,6 @@ domReady(function () {
 					document.querySelector("#error_screen").style.display = 'flex';
 				}, 1000);
 			} else if (response.code === 401){
-				alert(JSON.stringify(response));
 				document.querySelector("#error_txt").textContent = 'Network Error';
 
 				setTimeout(() => {
@@ -69,7 +66,6 @@ domReady(function () {
 			}
 		})
 		.catch((err) => {
-			alert(err);
 			document.querySelector("#error_txt").textContent = 'Network Error';
 
 			setTimeout(() => {
