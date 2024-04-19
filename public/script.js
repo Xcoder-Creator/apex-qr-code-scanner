@@ -23,7 +23,7 @@ domReady(function () {
 	async function onScanSuccess(decodeText, decodeResult) {
 		document.querySelector("#loader_screen").style.display = 'flex';
 
-		await fetch(`https://apex-qr-code-scanner.onrender.com/verify-qr-code`, {
+		await fetch(`https://apex-qr-code-scanner.onrender.com/api/verify-qr-code`, {
 			method: "POST",
 			
 			body: new URLSearchParams({
