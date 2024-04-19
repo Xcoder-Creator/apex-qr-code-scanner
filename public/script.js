@@ -8,15 +8,6 @@ const toggle_screens = () => {
 	document.querySelector("#success_screen").style.display = 'none';
 }
 
-async function playAudio(audioElement) {
-	try {
-	  await audioElement.play();
-	  alert("Audio played successfully");
-	} catch (error) {
-	  alert("Error playing audio:", error);
-	}
-}
-
 function domReady(fn) {
 	if (
 		document.readyState === "complete" ||
@@ -34,7 +25,7 @@ domReady(function () {
 	async function onScanSuccess(decodeText, decodeResult) {
 		if (is_scanning === false){
 			is_scanning = true;
-			playAudio(audio);
+			audio.play();
 			document.querySelector("#loader_screen").style.display = 'flex';
 
 			await fetch(`https://apex-qr-code-scanner.onrender.com/api/verify-qr-code`, {
